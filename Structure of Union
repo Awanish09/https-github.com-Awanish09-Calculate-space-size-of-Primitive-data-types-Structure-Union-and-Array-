@@ -1,0 +1,20 @@
+#include <stdio.h> 
+#include <string.h> 
+struct number 
+{ 
+ int integer; 
+ float decimal; 
+ char name[20]; }; 
+union number1
+{ 
+ int integer; 
+ float decimal; 
+ char name[20]; 
+}; 
+void main() 
+{ 
+ struct number s ={5, 15, "John"}; 
+ union number1 u = {5, 15, "John"}; 
+ printf("\nsizeof structure: %d\n", sizeof(s)); 
+ printf("sizeof union: %d\n", sizeof(u)); 
+}
